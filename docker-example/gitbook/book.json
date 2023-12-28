@@ -8,8 +8,7 @@
       "include-codeblock",
       "toggle-chapters",
       "back-to-top-button",
-      "github",
-      "pdf"
+      "github"
     ],
     "pluginsConfig": {
       "sharing": {
