@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitbook-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gitbook
+  template:
+    metadata:
+      labels:
+        app: gitbook
+    spec:
+      containers:
+      - name: gitbook
+        image: gitbook:v2  # 替换成你的 Docker 镜像名称和版本
+        ports:
+        - containerPort: 4000
+        volumeMounts:
+        - name: gitbook-data
+          mountPath: /app  # 挂载到容器的数据目录
+  volumes:
+  - name: gitbook-data
+    emptyDir: {}  # 使用空目录，也可以使用 PersistentVolumeClaim 进行持久化存储

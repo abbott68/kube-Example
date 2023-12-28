@@ -1,0 +1,62 @@
+{
+    "plugins": [
+      "theme-default",
+      "search",
+      "sharing",
+      "highlight",
+      "lunr",
+      "include-codeblock",
+      "toggle-chapters",
+      "back-to-top-button",
+      "github",
+      "pdf"
+    ],
+    "pluginsConfig": {
+      "sharing": {
+        "douban": false,
+        "facebook": false,
+        "google": false,
+        "hatena": false,
+        "instapaper": false,
+        "line": false,
+        "linkedin": false,
+        "messenger": false,
+        "pocket": false,
+        "qq": false,
+        "qzone": false,
+        "stumbleupon": false,
+        "twitter": false,
+        "vkontakte": false,
+        "weibo": false,
+        "whatsapp": false,
+        "all": [
+          "facebook",
+          "google",
+          "twitter",
+          "linkedin",
+          "weibo",
+          "email",
+          "line"
+        ]
+      },
+      "github": {
+        "url": "https://github.com/your-username/your-repo",
+        "edit": true,
+        "language": "en"
+      },
+      "pdf": {
+        "fontFamily": "Arial",
+        "fontSize": 12,
+        "paperSize": "a4",
+        "margin": {
+          "right": 62,
+          "left": 62,
+          "top": 36,
+          "bottom": 36
+        },
+        "footerTemplate": null,
+        "headerTemplate": null
+      }
+    }
+  }
+  
