@@ -21,10 +21,14 @@ spec:
         - containerPort: 4000
         volumeMounts:
         - name: gitbook-data
-          mountPath: /app/data  # 挂载到容器的数据目录
+          mountPath: /app  # 挂载到容器的数据目录
   volumes:
   - name: gitbook-data
-    emptyDir: {}  # 使用空目录，也可以使用 PersistentVolumeClaim 进行持久化存储
+    hostPath:
+      path: /data/gitbook/y37  # 挂载到宿主机的目录
+      type: Directory
+    
+  #  emptyDir: {}  # 使用空目录，也可以使用 PersistentVolumeClaim 进行持久化存储
 ```
 
 2. 创建 Service 文件（service.yaml）
