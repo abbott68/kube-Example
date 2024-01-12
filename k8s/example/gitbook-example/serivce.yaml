@@ -2,6 +2,7 @@ apiVersion: v1
 kind: Service
 metadata:
   name: gitbook-service
+  namespace: gitbook
 spec:
   selector:
     app: gitbook
@@ -9,3 +10,7 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 4000
+<<<<<<< HEAD
+=======
+#  type: LoadBalancer  # 根据需要选择 Service 类型
+>>>>>>> c71b702062e778dedfe3ddad68e48ee0890d4d90
