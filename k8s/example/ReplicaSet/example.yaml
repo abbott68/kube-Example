@@ -1,0 +1,19 @@
+apiVersion: apps/v1 # 指定了使用的Kubernetes API的版本
+kind: ReplicaSet   #定义了资源对象的类型，这里是"ReplicaSet"
+metadata:  #定义ReplicaSet的元数据信息，如名称、标签
+  name: nginx-replicaset
+spec:   # 定义了ReplicaSet的规范，包括选择器、副本数量和模板
+  replicas: 3 #定义副本数
+  selector: #定义了用于选择要管理的Pod的标签选择器
+    matchLabels:
+      app: nginx
+  template:  #定义了创建Pod的模板
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx-container
+          image: nginx:latest
+          ports:
+            - containerPort: 80
