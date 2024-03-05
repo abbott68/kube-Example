@@ -8,9 +8,6 @@ spec:
     app: gitbook
   ports:
     - protocol: TCP
-      port: 80
+      port: 4000
       targetPort: 4000
-<<<<<<< HEAD
-=======
 #  type: LoadBalancer  # 根据需要选择 Service 类型
->>>>>>> c71b702062e778dedfe3ddad68e48ee0890d4d90
