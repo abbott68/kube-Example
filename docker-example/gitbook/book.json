@@ -9,7 +9,9 @@
       "toggle-chapters",
       "back-to-top-button",
       "github",
-      "tbfed-pagefooter"
+      "tbfed-pagefooter",
+      "hide-element",
+      "pageview-count"
     ],
     "pluginsConfig": {
       "sharing": {
