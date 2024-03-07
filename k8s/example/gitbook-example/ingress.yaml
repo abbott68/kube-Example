@@ -1,17 +1,17 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: gitbook-ingress
+  name: gitbook-service
+  namespace: gitbook
   annotations:
     nginx.ingress.kubernetes.io/rewrite-target: /
-  namespace: gitbook
 spec:
   ingressClassName: nginx
   rules:
   - http:
       paths:
-      - path: /
-        pathType: Prefix
+      - pathType: Prefix
+        path: "/"
         backend:
           service:
             name: gitbook-service

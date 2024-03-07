@@ -43,7 +43,7 @@ spec:
     app: gitbook
   ports:
     - protocol: TCP
-      port: 80
+      port: 4000
       targetPort: 4000
   type: LoadBalancer  # 根据需要选择 Service 类型
 ```
@@ -70,3 +70,9 @@ kubectl get services
 数据目录 /app/data 使用了一个 emptyDir 卷，这是一个在 Pod 生命周期内存在的临时卷。如果需要持久化存储，你可能需要考虑使用 PersistentVolumeClaim 和 PersistentVolume。
 
 请确保你的 GitBook 服务能够正确运行，并且容器镜像包含了正确的配置。
+
+5. 创建ingress
+
+```shell
+kubectl  apply  -f ingress.yaml
+```
