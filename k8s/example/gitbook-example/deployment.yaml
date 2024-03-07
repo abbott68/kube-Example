@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: gitbook
-        image: gitbook:v1  # 替换成你的 Docker 镜像名称和版本
+        image: 339097468/gitbook:v3  # 替换成你的 Docker 镜像名称和版本
         ports:
         - containerPort: 4000
         imagePullPolicy: IfNotPresent
